@@ -112,8 +112,18 @@ if(MBGL_IOS_RENDER_TEST)
         ${MBGL_ROOT}/render-test/ios/ViewController.m
         ${MBGL_ROOT}/render-test/ios/iosTestRunner.h
         ${MBGL_ROOT}/render-test/ios/iosTestRunner.mm
-        ${MBGL_ROOT}/render-test/ios/main.m
-        ${RESOURCES}
+        ${MBGL_ROOT}/render-test/ios/ZipArchive/ZipArchive.h
+        ${MBGL_ROOT}/render-test/ios/ZipArchive/ZipArchive.mm
+        ${MBGL_ROOT}/render-test/ios/ZipArchive/minizip/crypt.h
+        ${MBGL_ROOT}/render-test/ios/ZipArchive/minizip/ioapi.h
+        ${MBGL_ROOT}/render-test/ios/ZipArchive/minizip/mztools.h
+        ${MBGL_ROOT}/render-test/ios/ZipArchive/minizip/unzip.h
+        ${MBGL_ROOT}/render-test/ios/ZipArchive/minizip/zip.h
+        ${MBGL_ROOT}/render-test/ios/ZipArchive/minizip/ioapi.c
+        ${MBGL_ROOT}/render-test/ios/ZipArchive/minizip/mztools.c
+        ${MBGL_ROOT}/render-test/ios/ZipArchive/minizip/unzip.c
+        ${MBGL_ROOT}/render-test/ios/ZipArchive/minizip/zip.c
+        ${MBGL_ROOT}/render-test/ios/main.m ${RESOURCES}
     )
     initialize_ios_target(RenderTestApp)
 
@@ -159,6 +169,7 @@ if(MBGL_IOS_RENDER_TEST)
             "-framework OpenGLES"
             "-framework QuartzCore"
             "-framework UIKit"
+            z
             mbgl-render-test
     )
 
