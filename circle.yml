@@ -773,7 +773,7 @@ jobs:
               if [[ -n $(ls render-test-app/TestLogs/*.zip 2>/dev/null) ]]; then
                 cp render-test-app/TestLogs/*.zip metrics/next-ios-render-test-runner/
                 cd metrics/next-ios-render-test-runner/
-                yes | unzip *.zip && rm *.zip
+                unzip *.zip && rm *.zip
               fi
             fi
       - next-save
