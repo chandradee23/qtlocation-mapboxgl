@@ -774,6 +774,7 @@ jobs:
                 cp render-test-app/TestLogs/*.zip metrics/next-ios-render-test-runner/
                 cd metrics/next-ios-render-test-runner/
                 unzip *.zip
+                rm -rf *.zip
               fi
             fi
       - next-save
