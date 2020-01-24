@@ -82,10 +82,10 @@
             self.metricResultPath = [path stringByAppendingPathComponent:@"/next-ios-render-test-runner-metrics.html"];
 
             BOOL fileFound = [fileManager fileExistsAtPath: self.styleResultPath];
-           if (fileFound == NO) {
-               NSLog(@"Style test result file '%@' doese not exit ", self.styleResultPath);
-               self.testStatus = NO;
-           }
+            if (fileFound == NO) {
+                NSLog(@"Style test result file '%@' doese not exit ", self.styleResultPath);
+                self.testStatus = NO;
+            }
 
             fileFound = [fileManager fileExistsAtPath: self.metricResultPath];
             if (fileFound == NO) {
